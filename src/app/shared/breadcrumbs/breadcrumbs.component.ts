@@ -20,10 +20,9 @@ export class BreadcrumbsComponent implements OnInit {
     this.getDataRoute()
       .subscribe(data => {
 
-        console.log(data);
         this.label = data.titulo;
         //this.title.setTitle(this.label);   // Muestra el título de cada pagina o de cada ruta
-        this.title.setTitle('GEMA');
+        this.title.setTitle('KAYA');
 
         let metaTag: MetaDefinition = {
           name: 'Descripción',
