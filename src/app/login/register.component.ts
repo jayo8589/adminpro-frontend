@@ -1,10 +1,7 @@
 import { Component, OnInit, group } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
-//import swal from 'sweetalert';
-//import * as swal from 'sweetalert';
-import * as swal from 'sweetalert';
-import { SweetAlert } from 'sweetalert/typings/core';
+import swal from 'sweetalert';
 
 //Servicios
 import { UsuarioService } from '../services/service.index';
@@ -76,9 +73,7 @@ export class RegisterComponent implements OnInit {
     }
 
     if (!this.forma.value.condiciones) {
-
-      let swalPersonal: SweetAlert = swal as any;
-      swalPersonal('Importante!', 'Debe aceptar las condiciones!', 'warning');
+      swal('Importante!', 'Debe aceptar las condiciones!', 'warning');
       return;
     }
 
